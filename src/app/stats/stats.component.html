@@ -1,0 +1,24 @@
+<div style="padding: 50px; display: flex; flex-direction: column; align-items: center; width: 100%;">
+    <mat-card style="width: 100%; max-width: 600px; padding: 24px; text-align: center;">
+      <h2 style="margin-bottom: 24px; color: #3f51b5;">Stats for {{ monthLabel }}</h2>
+  
+      <div *ngIf="currentMonthOptionCounts && getKeys(currentMonthOptionCounts).length; else noData">
+        <mat-list>
+          <mat-list-item *ngFor="let option of getKeys(currentMonthOptionCounts)" >
+            <mat-icon matListIcon style="margin-right: 16px; color: #4caf50;">check_circle</mat-icon>
+            <div class="mat-line" style="font-size: 16px; flex: 1;">
+              {{ getOptionLabel(option) }}
+            </div>
+            <div class="mat-line" style="font-weight: bold; font-size: 14px; color: #555;">
+              {{ currentMonthOptionCounts[option] }} day(s)
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+  
+      <ng-template #noData>
+        <p style="font-size: 18px; font-weight: bold; color: #f44336;">No data for this month.</p>
+      </ng-template>
+    </mat-card>
+  </div>
+  

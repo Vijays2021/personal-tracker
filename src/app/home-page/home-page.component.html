@@ -1,0 +1,17 @@
+<mat-card style="padding: 20px; width: 400px; margin: auto;">
+    <h2 style="margin-bottom: 20px;">Track Your Daily Habit</h2>
+  
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 8px; font-weight: 500;">Choose an option</label>
+      <mat-radio-group [(ngModel)]="selectedOption" style="display: flex; flex-direction: column;">
+        <mat-radio-button value="1" style="margin: 4px 0;">Went to gym</mat-radio-button>
+        <mat-radio-button value="2" style="margin: 4px 0;">Read at least a page</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  
+    <div style="display: flex; justify-content: space-between;">
+      <button mat-flat-button color="primary" (click)="saveData()">Save</button>
+      <button mat-stroked-button (click)="goToStats()">View Stats</button>
+    </div>
+  </mat-card>
+  

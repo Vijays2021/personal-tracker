@@ -1,0 +1,6 @@
+{
+  "routes": {
+    "/personal-tracker": {},
+    "/personal-tracker/stats": {}
+  }
+}
